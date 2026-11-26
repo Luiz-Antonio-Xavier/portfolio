@@ -1,0 +1,59 @@
+
+/* =====================================
+   RESET CSS
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* NAVEGAÇÃO */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 40px;
+}
+
+/* ESTRUTURA */
+
+body {
+    min-height: 100vh;
+}
+
+/* LISTAS */
+
+ul {
+    list-style: none;
+}
+
+/* LINKS */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* FORMULÁRIOS */
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+/* IMAGENS E VÍDEOS */
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+/* INTERAÇÃO */
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}

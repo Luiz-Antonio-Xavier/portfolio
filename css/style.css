@@ -1,0 +1,720 @@
+
+/* =====================================
+   CONFIGURAÇÕES GERAIS
+===================================== */
+
+body {
+    background: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-body);
+}
+
+.container {
+    width: min(90%, var(--container-width));
+    margin-inline: auto;
+}
+
+
+/* =====================================
+   CABEÇALHO
+===================================== */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    z-index: 10;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.navbar {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGOTIPO */
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* LINKS */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.nav-links a,
+.nav-contact {
+    font-size: 0.85rem;
+    color: var(--color-text);
+    transition: var(--transition);
+}
+
+.nav-links a:hover,
+.nav-contact:hover {
+    color: var(--color-gold-light);
+}
+
+/* CONTATO DO MENU */
+
+.nav-contact {
+    color: var(--color-text-muted);
+}
+
+
+/* =====================================
+   APRESENTAÇÃO PRINCIPAL
+===================================== */
+
+.hero {
+    min-height: 100svh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: var(--color-background);
+    isolation: isolate;
+}
+
+/* IMAGEM DE FUNDO */
+
+.hero-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -2;
+}
+
+/* CAMADA DE ESCURECIMENTO */
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 19, 14, 0.02) 0%,
+            rgba(15, 19, 14, 0.15) 35%,
+            rgba(15, 19, 14, 0.65) 65%,
+            rgba(15, 19, 14, 0.82) 100%
+        ),
+        linear-gradient(
+            0deg,
+            rgba(15, 19, 14, 0.65) 0%,
+            transparent 35%,
+            rgba(15, 19, 14, 0.18) 100%
+        );
+}
+
+/* CONTEÚDO */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding-top: 60px;
+}
+
+.hero-content > * {
+    max-width: 600px;
+}
+
+/* IDENTIFICAÇÃO */
+
+.hero-label {
+    color: var(--color-gold-light);
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    margin-bottom: 1.5rem;
+}
+
+/* NOME */
+
+.hero h1 {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+/* FRASE */
+
+.hero h2 {
+    margin-top: 1rem;
+    font-family: var(--font-heading);
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--color-text);
+}
+
+/* DESCRIÇÃO */
+
+.hero-content p {
+    margin-top: 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+
+/* =====================================
+   BOTÕES
+===================================== */
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.3rem;
+    font-size: 0.82rem;
+    transition: var(--transition);
+}
+
+/* BOTÃO PRINCIPAL */
+
+.btn-primary {
+    background: var(--color-gold-light);
+    color: var(--color-background);
+}
+
+.btn-primary:hover {
+    background: #E5D2A7;
+    transform: translateY(-2px);
+}
+
+/* BOTÃO SECUNDÁRIO */
+
+.btn-secondary {
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    color: var(--color-text);
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =====================================
+   RODAPÉ DA APRESENTAÇÃO
+===================================== */
+
+.hero-bottom {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+    color: var(--color-text);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+}
+
+.hero-bottom a {
+    transition: var(--transition);
+}
+
+.hero-bottom a:hover {
+    color: var(--color-gold-light);
+}
+
+
+/* =====================================
+   SEÇÕES DO PORTFÓLIO
+===================================== */
+
+.section {
+    padding-top: 7rem;
+    padding-bottom: 7rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.section-label {
+    color: var(--color-gold);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.section h2 {
+    margin: 1.5rem 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    color: var(--color-text);
+}
+
+.section p {
+    max-width: 700px;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+
+/* =====================================
+   SOBRE MIM
+===================================== */
+
+.about {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 5rem;
+}
+
+/* FOTO */
+
+.about-image {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 3 / 4;
+    overflow: hidden;
+    background: var(--color-background-light);
+    border: 1px solid var(--color-border);
+}
+
+.about-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* TEXTO */
+
+.about-info h2 {
+    margin: 1.5rem 0;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.about-info p {
+    margin-bottom: 1.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+/* ASSINATURA */
+
+.about-signature {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+}
+
+
+/* =====================================
+   CONHECIMENTOS
+===================================== */
+
+.skills {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.skills-header {
+    max-width: 720px;
+    margin-bottom: 4rem;
+}
+
+.skills-header h2 {
+    margin-top: 1.5rem;
+    margin-bottom: 1.2rem;
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.skills-header p {
+    color: var(--color-text-muted);
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.skills-list {
+    border-top: 1px solid var(--color-border);
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 60px 1fr auto;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.skill-row:hover {
+    padding-left: 0.8rem;
+}
+
+.skill-number {
+    color: var(--color-gold);
+    font-family: var(--font-heading);
+    font-size: 1rem;
+}
+
+.skill-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.skill-info p {
+    margin-top: 0.5rem;
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+}
+
+.skill-category {
+    color: var(--color-text-muted);
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+}
+
+
+/* =====================================
+   PROJETOS
+===================================== */
+
+.projects {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.projects-header {
+    max-width: 720px;
+    margin-bottom: 4rem;
+}
+
+.projects-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 1rem 0;
+}
+
+.projects-header p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2.5rem;
+}
+
+.project-card {
+    min-width: 0;
+}
+
+.project-image-link {
+    display: block;
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    background: var(--color-background-light);
+}
+
+.project-image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
+}
+
+.project-image-link:hover .project-image {
+    transform: scale(1.04);
+}
+
+.project-info {
+    padding-top: 1.5rem;
+}
+
+.project-category {
+    color: var(--color-gold);
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+}
+
+.project-info h3 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    margin: 0.8rem 0;
+}
+
+.project-info p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+    margin-bottom: 1.2rem;
+}
+
+.project-link {
+    color: var(--color-gold-light);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.project-link:hover {
+    color: var(--color-gold);
+}
+
+
+/* =====================================
+   HOBBIES
+===================================== */
+
+.hobbies {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.hobbies-header {
+    max-width: 720px;
+    margin-bottom: 4rem;
+}
+
+.hobbies-header h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    margin: 1rem 0;
+}
+
+.hobbies-header p {
+    color: var(--color-text-muted);
+    line-height: 1.8;
+}
+
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--color-border);
+}
+
+.hobby-card {
+    padding: 2rem;
+    border-bottom: 1px solid var(--color-border);
+    transition: var(--transition);
+}
+
+.hobby-card + .hobby-card {
+    border-left: 1px solid var(--color-border);
+}
+
+.hobby-card:hover {
+    background: var(--color-background-light);
+}
+
+.hobby-number {
+    color: var(--color-gold);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+}
+
+.hobby-card h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin: 2rem 0 1rem;
+}
+
+.hobby-card p {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   CONTATO
+===================================== */
+
+.contact {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+.contact-content {
+    max-width: 750px;
+}
+
+.contact-content h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(2.2rem, 5vw, 3.8rem);
+    margin: 1rem 0 1.5rem;
+}
+
+.contact-content p {
+    color: var(--color-text-muted);
+    line-height: 1.9;
+    max-width: 620px;
+    margin-bottom: 2rem;
+}
+
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contact-link {
+    display: inline-block;
+    color: var(--color-gold-light);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-gold);
+    padding-bottom: 0.5rem;
+    transition: var(--transition);
+}
+
+.contact-link:hover {
+    color: var(--color-gold);
+}
+
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+.footer {
+    padding: 2rem 0;
+    background: var(--color-background-light);
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    color: var(--color-text-muted);
+    font-size: 0.75rem;
+}
+
+
+/* =====================================
+   RESPONSIVIDADE
+===================================== */
+
+@media (max-width: 768px) {
+
+    /* SOBRE MIM */
+
+    .about {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-image {
+        max-width: 380px;
+        margin-inline: auto;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    /* CONHECIMENTOS */
+
+    .skills {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .skills-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .skill-row {
+        grid-template-columns: 35px 1fr;
+        gap: 1rem;
+        padding: 1.5rem 0;
+    }
+
+    .skill-category {
+        grid-column: 2;
+    }
+
+    /* PROJETOS */
+
+    .projects {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    /* HOBBIES */
+
+    .hobbies {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .hobbies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-card + .hobby-card {
+        border-left: none;
+    }
+
+    /* CONTATO */
+
+    .contact {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+}

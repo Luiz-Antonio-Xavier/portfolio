@@ -1,0 +1,196 @@
+
+/* =====================================
+   TABLETS
+===================================== */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 1.4rem;
+    }
+
+    .hero-content > * {
+        max-width: 520px;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.8rem, 6vw, 4.5rem);
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(15, 19, 14, 0.15),
+                rgba(15, 19, 14, 0.75)
+            );
+    }
+
+}
+
+
+/* =====================================
+   CELULARES
+===================================== */
+
+@media (max-width: 650px) {
+
+    :root {
+        --header-height: 72px;
+    }
+
+    .navbar {
+        width: 92%;
+    }
+
+    .nav-links {
+        gap: 0.9rem;
+    }
+
+    .nav-links a {
+        font-size: 0.7rem;
+    }
+
+    .nav-contact {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+        align-items: flex-end;
+        padding-bottom: 6rem;
+    }
+
+    .hero-image {
+        object-position: 35% center;
+    }
+
+    .hero-overlay {
+        background:
+            linear-gradient(
+                0deg,
+                rgba(15, 19, 14, 0.94) 0%,
+                rgba(15, 19, 14, 0.75) 40%,
+                rgba(15, 19, 14, 0.15) 100%
+            );
+    }
+
+
+    /* CONTEÚDO */
+
+    .hero-content {
+        align-items: flex-start;
+        text-align: left;
+        padding-top: 100px;
+    }
+
+    .hero-label {
+        font-size: 0.62rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(2.6rem, 10vw, 4rem);
+    }
+
+    .hero h2 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.88rem;
+    }
+
+
+    /* BOTÕES */
+
+    .hero-buttons {
+        flex-wrap: wrap;
+        gap: 0.8rem;
+    }
+
+    .btn {
+        padding: 0.9rem 1rem;
+        font-size: 0.75rem;
+    }
+
+
+    /* RODAPÉ DO HERO */
+
+    .hero-bottom {
+        bottom: 1.5rem;
+        font-size: 0.5rem;
+        letter-spacing: 0.06em;
+    }
+
+
+    /* SEÇÕES */
+
+    .section {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+
+    /* RODAPÉ */
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* =====================================
+   CELULARES PEQUENOS
+===================================== */
+
+@media (max-width: 380px) {
+
+    .nav-links {
+        gap: 0.65rem;
+    }
+
+    .nav-links a {
+        font-size: 0.63rem;
+    }
+
+    .logo {
+        font-size: 1.6rem;
+    }
+
+    .hero-buttons {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero-bottom span {
+        max-width: 190px;
+        line-height: 1.5;
+    }
+
+}
+
+
+/* =====================================
+   ACESSIBILIDADE
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+
+}
